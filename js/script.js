@@ -1,9 +1,9 @@
 const blocks = document.querySelectorAll('.block');
 const btn = document.querySelector('.btn');
 let interval;
+let i = 0;
 btn.addEventListener('click', () => {
    clearInterval(interval);
-   let i = 0;
    interval = setInterval(() => {
       const color = "#" + Math.floor(Math.random() * 16777215).toString(16);
       blocks[i].style.backgroundColor = color;
@@ -27,6 +27,17 @@ btn.addEventListener('click', () => {
       }
    }, 500);
 });
+
+// * const btn = document.querySelector('.btn');
+// * let x;
+// * let i = 0;
+// * btn.addEventListener('click', () => {
+// *    clearInterval(x);
+// *    x = setInterval(() => {
+// *       i++;
+// *       console.log(i);
+// *    }, 500);
+// * });
 
 // for(let item of blocks) {
 //    item.addEventListener('click', e => {
